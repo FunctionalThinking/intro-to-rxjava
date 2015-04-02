@@ -18,6 +18,10 @@ repositories {
 apply plugin: 'java'
 apply plugin: 'me.tatarka.retrolambda'
 
+retrolambda {
+    oldJdk System.getenv("JAVA6_HOME")
+}
+
 // jar 파일 패키징 설정
 jar {
     // 'fat' jar 생성을 위하여 의존성 포함시키기
@@ -35,4 +39,5 @@ jar {
 // 의존성 관리를 위한 설정
 dependencies {
     compile 'io.reactivex:rxjava:1.0.0'
+    testCompile 'junit:junit:4.11'
 }
