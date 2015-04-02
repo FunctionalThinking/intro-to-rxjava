@@ -109,3 +109,4 @@
 - [Getting Started with Gradle: Our First Java Project](http://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-our-first-java-project/)
 - [Getting Started with Gradle: Dependency Management](http://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-dependency-management/)
 - [Gradle Retrolambda Plugin](https://github.com/evant/gradle-retrolambda)
+- [JUnit 4 - Use with Gradle](https://github.com/junit-team/junit/wiki/Use-with-Gradle)
