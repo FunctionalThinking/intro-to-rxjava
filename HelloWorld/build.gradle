@@ -1,0 +1,38 @@
+// retrolambda를 위한 빌드 스크립트 설정
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.0.0'
+    }
+}
+
+// 의존성 관리를 위한 외부 저장소 지정
+repositories {
+    mavenCentral()
+}
+
+// gradle 플러그인 - java, retrolambda
+apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+
+// jar 파일 패키징 설정
+jar {
+    // 'fat' jar 생성을 위하여 의존성 포함시키기
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    // Manifest.mf - Main-Class 지정
+    manifest {
+        attributes 'Main-Class': 'com.lge.HelloWorld'
+    }
+}
+
+// 의존성 관리를 위한 설정
+dependencies {
+    compile 'io.reactivex:rxjava:1.0.0'
+}
