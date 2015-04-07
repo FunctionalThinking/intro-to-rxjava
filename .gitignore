@@ -3,3 +3,7 @@
 build
 .idea/workspace.xml
 .idea/libraries
+*.iml
+
+ObservableSubscriber/.idea/workspace.xml
+ObservableSubscriber/.idea/libraries
